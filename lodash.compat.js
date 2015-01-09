@@ -1840,7 +1840,7 @@
             return baseAssign(result, value);
           }
         } else {
-          return cloneableTags[tag]
+          return isCloneable(value)
             ? initCloneByTag(value, tag, isDeep)
             : (object ? value : {});
         }
